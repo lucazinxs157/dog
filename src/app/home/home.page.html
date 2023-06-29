@@ -1,0 +1,46 @@
+<ion-content no-scroll padding class="background-image" [fullscreen]="true">
+  <div class="logo-div" class="lcs">
+    <img src="../../assets/icon/LOGO-removebg-preview (1).png" alt="logo-lukinhaz" class="logo">
+  </div>
+  <div class="inputs">
+    <ion-row style="margin-top: 30px">
+      <ion-col>
+        <ion-item class="roundeInput" line="none">
+          <ion-label position="floating"
+            >Nome <span style="color: red">*</span></ion-label
+          >
+          <ion-input class="boca"
+            [(ngModel)]="dog.nome"
+            type="text"
+            expand="block"
+            style="color: #222"
+            placeholder="Floquinho"
+
+          > <style type="text/css"></style></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: 30px">
+      <ion-col>
+        <ion-item class="roundeInput" line="none">
+          <ion-label position="floating"
+            >Idade <span style="color: red">*</span></ion-label
+          >
+          <ion-input
+          [(ngModel)]="dog.idade"
+            expand="block"
+            style="color: #222"
+            placeholder="6"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col class="espaco">
+      <ion-button color="dark"   class="Cadastrar" shape="block" (click)="Cadastrar()">Cadastrar</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

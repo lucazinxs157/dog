@@ -1,0 +1,39 @@
+<ion-content class="background" [fullscreen]="true">
+  <div *ngFor="let list of dogs">
+    <ion-card class="cartao">
+      <img alt="{{list.nome}}" src="{{list.imagem}}" style="width: 100%;"/>
+      <ion-card-header>
+        <ion-card-title class="font" style="color:white"
+          >{{list.nome}}</ion-card-title
+        >
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card-subtitle class="font" style="color:black"
+          >Idade: {{list.idade}} anos</ion-card-subtitle
+        >
+        <ion-row>
+          <ion-col size="8"></ion-col>
+          
+          <ion-col size="4">
+            <ion-button (click)="Deletar(list.imagem)" size="small" color="black">
+              <ion-icon name="trash-outline"></ion-icon>
+              <ion-label style="margin-top: 0; margin-left: 6px"
+              >Excluir</ion-label
+              >
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-fab
+    slot="fixed"
+    vertical="bottom"
+    horizontal="end"
+    style="margin-right: 1rem"
+  >
+    <ion-fab-button (click)="novo()" color="dark">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
